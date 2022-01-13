@@ -1,5 +1,7 @@
 package h01_anotasyonlar;
 
+import java.util.Scanner;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -26,13 +28,24 @@ public class H2_Save {
 	
 	Transaction tx=session.beginTransaction();
 	
-	H1_Sehir sehir1 = new H1_Sehir(37, "Istanbul", 10000000);
+	/*H1_Sehir sehir1 = new H1_Sehir(37, "Istanbul", 10000000);
 	
-	session.save(sehir1);
+	session.save(sehir1);// insert into
 	
+	session.save(new H1_Sehir(35, "Izmir", 2500000));
+	*/
 	
+	//disaridan veri girelim
 	
+	Scanner scan=new Scanner(System.in);
+	System.out.println("Plaka giriniz: ");
+	int plaka=scan.nextInt();
+	System.out.println("Sehir ismi giriniz: ");
+	String sehir=scan.next();
+	System.out.println("Nufus giriniz: ");
+	int nufus=scan.nextInt();
 	
+	session.save(new H1_Sehir(plaka, sehir, nufus));
 	
 	
 	
@@ -42,6 +55,7 @@ public class H2_Save {
 	
 	sf.close();
 	session.close();
+	scan.close();
 	}
 
 }

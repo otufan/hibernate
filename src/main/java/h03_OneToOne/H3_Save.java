@@ -26,7 +26,7 @@ public class H3_Save {
 		gunluk1.setKisi(kisi1);
 		gunluk2.setKisi(kisi2);
 		gunluk3.setKisi(kisi3);
-		gunluk3.setKisi(null);
+		gunluk4.setKisi(null);
 		
 		
 		Configuration con = new Configuration().configure("hibernate.cfg.xml")

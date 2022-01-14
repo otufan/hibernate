@@ -17,7 +17,7 @@ public class H2_Gunluk {   // PARENT
 	private String owner;
 
 	@OneToOne
-	@JoinColumn(name="kisi_id") // foreign key hangi isimle gozukecegine burada karar verdik
+	@JoinColumn(name="kisi_no") // foreign key hangi isimle gozukecegine burada karar verdik
 	private H1_Kisi kisi;
 	
 	public H2_Gunluk() {}

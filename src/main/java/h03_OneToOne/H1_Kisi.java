@@ -15,7 +15,7 @@ public class H1_Kisi {
 	@Column(name="kisi_id")
 	private int kisiId;
 	
-	@Column(name="kisi_adi")
+	@Column(name="kisi_ad")
 	private String kisiAd;
 	
 	private int kisiYas;

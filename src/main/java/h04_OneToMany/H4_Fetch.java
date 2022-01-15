@@ -68,6 +68,8 @@ public class H4_Fetch {
 		int sayi=session.createQuery("delete from H2_Kitap").executeUpdate();		
 		System.out.println(sayi);
 		
+		
+		
 
 		tx.commit();
 		session.close();

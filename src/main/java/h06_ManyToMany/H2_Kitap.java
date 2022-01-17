@@ -14,7 +14,19 @@ public class H2_Kitap {
 	private int book_id;
 	private String book;
 	
-	@ManyToMany
+	
+	/*
+	 İki tablo arasında "Many To Many" ilişkisi oluşturmak istediğinizde, @ManyToMany ek açıklamasını kullanmanız gerekir.
+*/
+   
+   /*
+     Note: @mappedBy("books") kullanmazsanız, fazladan 2 farklı tablo oluşturacaktır.
+çünkü H2_Kitap tablosu H2_Kitap_H1_Ogrenci tablosunu oluştururken, H1_Ogrenci tablosu ise H1_Ogrenci_H2_Kitap tablosunu oluşturur.
+İki tablo arasında ilişki oluşturmak için 2 tabloya gerek yoktur
+bunu önlemek için @mappedBy("books") kullanmalıyız
+   */
+	
+	@ManyToMany(mappedBy ="books")
 	private List<H1_Ogrenci> students=new ArrayList<>();
 	
 	

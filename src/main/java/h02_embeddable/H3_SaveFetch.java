@@ -17,7 +17,7 @@ public class H3_SaveFetch {
 		Session session=sf.openSession();
 		Transaction tx=session.beginTransaction();
 		
-		/*H2_Dersler ders1=new H2_Dersler("Muzik", "Matematik");
+		H2_Dersler ders1=new H2_Dersler("Muzik", "Matematik");
 		
 		H1_Ogrenci ogr1=new H1_Ogrenci(111, "Adem Sakir", 87, ders1);
 		
@@ -25,7 +25,7 @@ public class H3_SaveFetch {
 		
 		H1_Ogrenci ogr2=new H1_Ogrenci(222, "Isa Yildiz", 92, new H2_Dersler("Beden", "Fizik") );
 		
-		session.save(ogr2); */
+		session.save(ogr2); 
 		
 		// Fetch islemi
 		
